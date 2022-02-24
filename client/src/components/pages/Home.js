@@ -8,6 +8,8 @@ const Home = () => {
 
    const handleItemChange = (event) => {
     console.log(event.target.value);
+    console.log(event.timeStamp);
+    console.log(event.currentTarget);
     setValue(event.target.value);
   }
   

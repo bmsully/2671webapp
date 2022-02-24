@@ -42,7 +42,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <Home path="/" /> {/*handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} /> */}
+        <Home path="/" /> 
         <NotFound default />
       </Router>
     </>
