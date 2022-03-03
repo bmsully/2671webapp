@@ -17,8 +17,6 @@ const Home = () => {
     ]
   );
 
-
-
   useEffect(() => {
     retrievePassageText();
   }, []);
@@ -41,7 +39,7 @@ const Home = () => {
     const minLength = 100;
     const maxLength = 150;
     // const query = {minLength: minLength, maxLength: maxLength};
-    const url = `http://api.quotable.io/random?minLength=${minLength}&maxLength=${maxLength}`;
+    const url = `https://api.quotable.io/random?minLength=${minLength}&maxLength=${maxLength}`;
     fetch(url).then((res) => {
       res.json().then((jsonRes) => {
         setPassageText(jsonRes.content);
