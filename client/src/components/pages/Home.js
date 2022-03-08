@@ -70,7 +70,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="u-flexColumn u-flex-justifyCenter u-flex-alignCenter">
+    <div className="u-flexColumn u-flex-justifyCenter u-flex-alignCenter Home-container">
       <h1>Text Logging Web App for 2.671</h1>
         <div className="Home-passageText">{passageText}</div>
         <input
