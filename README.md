@@ -14,7 +14,7 @@ On arriving to the website, a random passage of length between 100 and 150 chara
 
 ## Future Improvements
 
-- Add brief explanation of how webpage works, similar to the How it works section above
+- Add brief explanation of how webpage works, similar to the [How it works](#how-it-works) section above
 - Improve the UI of the app with more basic coloring; generalize to be non-2.671 specific
 - Improve the styling of the CSV Link so always visible as a button but inactive when nothing has been typed
 - Add fields to change the minimum and maximum lengths of the passages
@@ -23,4 +23,4 @@ On arriving to the website, a random passage of length between 100 and 150 chara
 
 Thank you to the Weblab (6.148) staff for the web skeleton
 
-*Last updated by Brady Sullivan 3/7/2022 2:18 PM EST*
+*Last updated by Brady Sullivan 3/7/2022 2:19 PM EST*
