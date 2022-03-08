@@ -1,1 +1,21 @@
-/* Fill me in :) */
+.Home-passageText {
+    width: 80%;
+    font-size: large;
+}
+
+.Home-textText {
+    width: 80%;
+    height: large;
+    font-size: large;
+    margin: 10px 0px;
+
+}
+
+.Home-exportLink {
+    font-size: x-large;
+    margin: 10px 0px;
+}
+
+.Home-resetButton {
+    margin: 10px 0px;
+}

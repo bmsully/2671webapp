@@ -89,6 +89,7 @@ const Home = () => {
         <>
         <h3>Export to CSV</h3>
           <CSVLink
+            className="Home-exportLink"
             headers={fileHeaders}
             data={typingData}
             filename="results.csv"
@@ -98,7 +99,7 @@ const Home = () => {
           </CSVLink>
           </>
         }
-        <button onClick={resetData}>Reset</button>
+        <button className="Home-resetButton" onClick={resetData}>Reset</button>
       </div>
     </>
   );
