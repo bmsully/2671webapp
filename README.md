@@ -1,90 +1,26 @@
-# How to code a webapp with this skeleton
 
-## Initial setup
+# Typing 2.671 Web App
 
-All teammates will need (explained in http://weblab.to/install)
-  - A bash console (on Mac or Linux, this is Terminal. On Windows, we recommend Git Bash)
-  - NodeJS version 16. If it is installed correctly, typing "node --version" should give v16.13.1 and "npm --version" should give 8.1.2
-  - Visual Studio Code (or another code editor)
-  - the Prettier VSCode extension
+This is a web-page application that was created in Spring 2022 for 2.671 Measurement & Instrumentation. It was specifically created for Go Forth and Measure which is a self-led project with the goal of teaching the fundamentals of experimental Design, Experimentation, Interpretation, and Communication. I took the skills learned from IAP 2022 Weblab (6.148) and created this web app to assist in my project. I am examining the effects various computer keyboard mechanisms have on typing, specifically typing force, speed, and accuracy. The web app is part of the experimentation portion and is set up to provide random passages for the user to type, logging keystrokes and timestamps, then providing the data in a downloadable CSV format for further data analysis.
 
-Also, all of you will need to go through the MongoDB Atlas setup (http://weblab.to/mongo-setup). 
+## How it works
 
-Additionally for authentication, one of you will need to obtain a CLIENT_ID, instructions are at http://weblab.to/clientid 
+On arriving to the website, a random passage of length between 100 and 150 characters is presented. The internal clock begins timing upon every reload of the webpage. A user can begin typing in the text box. Keystrokes will be logged with timestamps. When done typing, the keystroke, timestamp, and passage data can be downloaded by clicking on the 'Export to CSV' link. The user then resets the page which fetches and displays a new passage, clears the previously typed text, and resets the data collection.
 
-## Downloading these files
+## Packages and Resources
 
-First, you probably have a team repository somewhere (the link looks like: https://github.com/weblab-class/teammate1-teammate2-teammate3). You each should clone this (empty) repository by navigating to where you want your folder to be (**NOT in catbook**) and typing: git clone https://github.com/weblab-class/teammate1-teammate2-teammate3.git <-- with the correct link.
+- api.quotable.io is used to fetch random passages for the typing tests
+- react-csv is used to format the text logging data into a CSV format and provide a link for this file to be downloaded.
 
-Then, one of your team members will need to do the following: 
+## Future Improvements
 
-First on GitHub, download the skeleton (this repository) as a zip file, by clicking Code -> Download as ZIP. (Do not clone it, since this will download extra files, like .git, which will lead to GitHub being confused). 
+- Add brief explanation of how webpage works, similar to the How it works section above
+- Improve the UI of the app with more basic coloring; generalize to be non-2.671 specific
+- Improve the styling of the CSV Link so always visible as a button but inactive when nothing has been typed
+- Add fields to change the minimum and maximum lengths of the passages
 
-Then, drag over all of the files in this skeleton into your team's folder. **Make sure to also drag over the hidden files!** To see these hidden files, navigate to the skeleton in Finder/File Explorer and press command+shift+period (mac) or View > Show > Hidden items (windows). 
+## Thanks
 
-The files/folders you must drag over are:
-  - .babelrc (hidden)
-  - .gitignore (hidden)
-  - .npmrc (hidden)
-  - .prettierrc (hidden)
-  - client (folder)
-  - package-lock.json
-  - package.json
-  - README.md
-  - server (folder)
-  - webpack.config.js
+Thank you to the Weblab (6.148) staff for the web skeleton
 
-[Quick youtube demo on dragging the files](https://www.youtube.com/watch?v=7Q_xxowPW1c)
-
-Then, in terminal, navigate to your teams folder and push all of the files to your team's GitHub repository as usual:
-   - git add -A
-   - git commit -m "Skeleton code"
-   - git push 
-
-Now the rest of your teammates can pull all these files with a 'git pull'!
-
-Post on Piazza if you run into any issues
-
-## What you need to change in the skeleton
-
-- Change the Frontend CLIENT_ID (Skeleton.js) to your team's CLIENT_ID (obtain this at http://weblab.to/clientid)
-- Change the Server CLIENT_ID to the same CLIENT_ID (auth.js) 
-- Change the Database SRV (mongoConnectionURL) for Atlas (server.js). You got this in the MongoDB setup. remember to replace <password> and <dbname> (should be no < or > in your SRV)
-- Change the Database Name for MongoDB to whatever you put in the SRV to replace <dbname> (server.js)
-- (Optional) Add a favicon to your website at the path client/dist/favicon.ico
-- (Optional) Update website title in client/dist/index.html
-- (Optional) Update this README file ;)
-- (Optional) Update the package.json file with your app name :) (line 2)
-  
-## How to run this skeleton
-First, 'npm install'
-Then open two seperate terminals, and 'npm run hotloader' in the first, and 'npm start' in the second.
-Then open http://localhost:5000
-
-## How to go from this skeleton to your actual app
-Check out this [How to Get Started Guide](http://weblab.to/get-started)
-  
-## Socket stuff
-Note: we'll be getting to this in lecture in week 2, so don't worry if you don't know it yet
-
-- If you're not using realtime updating or don't need server->client communication, you can remove socket entirely! (server-socket.js, client-socket.js, and anything that imports them)
-- If you are using sockets, consider what you want to do with the FIXME in server-socket.js
-
-## Edit at your own risk
-
-the following files students do not need to edit. feel free to read them if you would like.
-
-```
-client/src/index.js
-client/src/utilities.js
-client/src/client-socket.js
-server/validator.js
-server/server-socket.js
-.babelrc
-.npmrc
-.prettierrc
-package-lock.json
-webpack.config.js
-```
-
-## Good luck on your project :)
+*Last updated by Brady Sullivan 3/7/2022 2:18 PM EST*
